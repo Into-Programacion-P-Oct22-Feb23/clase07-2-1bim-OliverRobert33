@@ -19,13 +19,14 @@ public class Ejemplo03 {
         entrada.useLocale(Locale.US);
         String cadenaFinal = "";
         double nota;
+        double suma = 0;
         boolean bandera = true;
         int salida;
         
         do {
             System.out.println("Ingrese calificaciones");
             nota = entrada.nextDouble();
-            
+            suma = suma + nota;
             cadenaFinal = String.format("%s%.2f\n", cadenaFinal, 
                     nota);
             
@@ -39,6 +40,8 @@ public class Ejemplo03 {
         } while (bandera); // (bandera==true)
         
         cadenaFinal = String.format("%s\n", cadenaFinal);
-        System.out.printf("Listado de Notas\n%s\n", cadenaFinal);
+        cadenaFinal = String.format("%s\n La suma es:%.2f\n", cadenaFinal, suma);
+        System.out.printf("Listado de Notas\n%s", cadenaFinal);
+        //System.out.printf("Suma de Notas:\n%s%2\n", suma);
     }
 }

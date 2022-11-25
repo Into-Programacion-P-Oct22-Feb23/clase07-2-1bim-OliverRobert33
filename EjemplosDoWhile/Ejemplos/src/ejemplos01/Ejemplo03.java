@@ -19,14 +19,16 @@ public class Ejemplo03 {
         entrada.useLocale(Locale.US);
         String cadenaFinal = "";
         double nota;
+
         boolean bandera = true;
         int salida;
         do {
             System.out.println("Ingrese calificaciones");
             nota = entrada.nextDouble();
+            
             cadenaFinal = String.format("%s%.2f\n", cadenaFinal, nota);
 
-            System.out.println("Ingrese (-111) si desea salir del ciclo ");
+            System.out.println("Ingrese (-111) si desea salir del ciclo "); //salida de numero enteros y no se utiliza la limpieza de buffer
             salida = entrada.nextInt();
 
             if (salida == -111) {
